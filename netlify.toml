@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Optional: If you host the Express backend separately (e.g., Render, Railway, Cloud Run),
+# uncomment the redirect below and replace with your backend URL, OR set VITE_API_BASE_URL in Netlify env vars.
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://YOUR_BACKEND_URL/api/:splat"
+#   status = 200
+#   force = true
+
+# SPA fallback so custom routes (/bobysmmpanal, /admin, /orders, /wallet, /services) work on refresh
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
